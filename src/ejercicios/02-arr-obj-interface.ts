@@ -1,24 +1,25 @@
 /*
-    ===== Código de TypeScript =====
+    ==== Codigo de TypeScript ====
 */
 
-let habilidades: string[] = ['Bash','Counter', 'Healing'];
+let habilidades: string[] = ['Bash', 'Counter', 'Healing'];
 
-interface Personaje {
+interface IPersonaje{
     nombre: string;
-    hp: number;
+    edad: number;
     habilidades: string[];
-    puebloNatal?: string;
+    ciudad?: string;
 }
 
 
-const personaje: Personaje = {
-    nombre: 'Strider',
-    hp: 100,
-    habilidades: ['Bash','Counter','Healing']
+const personaje: IPersonaje= {
+    nombre: 'Ismael',
+    edad: 31,
+    habilidades: ['Bash', 'Counter', 'Healing']
 }
 
-personaje.puebloNatal = 'Pueblo Paleta';
+
+personaje.ciudad = 'Sincelejo';
 
 
-console.table( personaje );
+console.table(personaje)

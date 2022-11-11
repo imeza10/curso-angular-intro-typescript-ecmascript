@@ -1,41 +1,35 @@
 /*
-    ===== Código de TypeScript =====
+    ==== Codigo de TypeScript ====
 */
 
-export interface Producto {
+export interface IProducto{
     desc: string;
     precio: number;
 }
 
-const telefono: Producto = {
-    desc: 'Nokia A1',
-    precio: 150
+const telefono: IProducto = {
+    desc: 'Xiaomi',
+    precio: 1200
 }
 
-const tableta: Producto = {
-    desc: 'iPad Air',
-    precio: 350
+const tablet: IProducto = {
+    desc: 'Samsung TAB E3',
+    precio: 800
 }
 
-
-
-export function calculaISV( productos: Producto[] ):[number, number] {
-
+export function calculaISV(productos: IProducto[]): [number, number]{
     let total = 0;
 
-    productos.forEach(  ({ precio }) => {
+    productos.forEach( ({precio}) => {
         total += precio;
     })
 
-    return [total, total * 0.15];
-
+    return [total, total*0.15];
 }
 
+// const articulos = [telefono, tablet];
 
-// const articulos = [ telefono, tableta ];
+// const [total, isv] = calculaISV(articulos);
 
-// const [ total, isv ] = calculaISV( articulos );
-
-// console.log('Total:', total );
-// console.log('ISV:', isv);
-
+// console.log('Total:',total)
+// console.log('ISV:',isv)
